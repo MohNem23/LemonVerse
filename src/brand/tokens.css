@@ -1,0 +1,35 @@
+:root {
+  --brand-background: #111317;
+  --brand-surface: #171a21;
+  --brand-surface-soft: #1f232d;
+  --brand-panel: rgba(23, 26, 33, 0.84);
+  --brand-line: rgba(255, 255, 255, 0.08);
+  --brand-foreground: #f4f1eb;
+  --brand-muted: #c4beaf;
+  --brand-primary: #f4d03f;
+  --brand-primary-soft: #ffeebb;
+  --brand-accent: #65e3ff;
+  --brand-accent-soft: #d2f5ff;
+  --brand-danger: #ffb4a8;
+  --brand-noir: #7d1110;
+  --brand-shadow: 0 32px 100px rgba(0, 0, 0, 0.34);
+}
+
+@theme inline {
+  --color-background: var(--brand-background);
+  --color-surface: var(--brand-surface);
+  --color-surface-soft: var(--brand-surface-soft);
+  --color-panel: var(--brand-panel);
+  --color-line: var(--brand-line);
+  --color-foreground: var(--brand-foreground);
+  --color-muted: var(--brand-muted);
+  --color-primary: var(--brand-primary);
+  --color-primary-soft: var(--brand-primary-soft);
+  --color-accent: var(--brand-accent);
+  --color-accent-soft: var(--brand-accent-soft);
+  --color-danger: var(--brand-danger);
+  --color-noir: var(--brand-noir);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-newsreader);
+  --font-display: var(--font-fredoka);
+}

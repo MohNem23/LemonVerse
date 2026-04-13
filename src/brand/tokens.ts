@@ -1,0 +1,15 @@
+export const brandPalette = {
+  background: "#111317",
+  surface: "#171a21",
+  surfaceSoft: "#1f232d",
+  panel: "rgba(23, 26, 33, 0.84)",
+  line: "rgba(255, 255, 255, 0.08)",
+  foreground: "#f4f1eb",
+  muted: "#c4beaf",
+  primary: "#f4d03f",
+  primarySoft: "#ffeebb",
+  accent: "#65e3ff",
+  accentSoft: "#d2f5ff",
+  danger: "#ffb4a8",
+  noir: "#7d1110",
+} as const;
