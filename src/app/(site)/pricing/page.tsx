@@ -2,7 +2,7 @@ import { PricingPage } from "@/components/pages/pricing-page";
 import { StructuredData } from "@/components/seo/structured-data";
 import { pricingFaqs } from "@/content/faqs";
 import { pricingContent } from "@/content/pricing";
-import { breadcrumbJsonLd, buildMetadata, faqJsonLd, offerCatalogJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, buildMetadata, faqJsonLd, offerCatalogJsonLd, webPageJsonLd } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Pricing and Family Plans",
@@ -16,6 +16,12 @@ export default function PricingRoute() {
     <>
       <StructuredData
         data={[
+          webPageJsonLd({
+            title: "Pricing and Family Plans",
+            description:
+              "Compare LemonVerse pricing for the two-world learning model, including the Unified Family Bundle, solo access, and family profile coverage.",
+            path: "/pricing",
+          }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
             { name: "Pricing", path: "/pricing" },

@@ -34,4 +34,23 @@ pnpm build
 
 ## SEO Note
 
-Set `NEXT_PUBLIC_SITE_URL` in production so canonical URLs, sitemap entries, Open Graph metadata, and `llms.txt` resolve to the deployed domain instead of `http://localhost:3000`.
+Set `NEXT_PUBLIC_SITE_URL` in production so canonical URLs, sitemap entries, Open Graph metadata, and `llms.txt` resolve to the deployed domain.
+
+Optional enterprise SEO/GEO environment variables:
+
+- `NEXT_PUBLIC_TWITTER_HANDLE`
+- `NEXT_PUBLIC_TWITTER_SITE_ID`
+- `NEXT_PUBLIC_TWITTER_CREATOR_ID`
+- `NEXT_PUBLIC_FACEBOOK_APP_ID`
+- `NEXT_PUBLIC_FACEBOOK_ADMINS` (comma-separated list)
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
+- `NEXT_PUBLIC_BING_SITE_VERIFICATION`
+- `NEXT_PUBLIC_YAHOO_SITE_VERIFICATION`
+- `NEXT_PUBLIC_YANDEX_VERIFICATION`
+- `NEXT_PUBLIC_LINKEDIN_URL`
+- `NEXT_PUBLIC_X_URL`
+- `NEXT_PUBLIC_FACEBOOK_URL`
+- `NEXT_PUBLIC_INSTAGRAM_URL`
+- `NEXT_PUBLIC_YOUTUBE_URL`
+- `NEXT_PUBLIC_TIKTOK_URL`
+- `NEXT_PUBLIC_THREADS_URL`
