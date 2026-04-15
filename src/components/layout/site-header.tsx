@@ -25,7 +25,7 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-background/80 backdrop-blur-xl">
-      <Container className="flex items-center justify-between gap-6 py-4">
+      <Container className="max-w-[82rem] flex items-center justify-between gap-4 py-3 xl:px-8 2xl:px-10">
         <Link
           href="/"
           className="inline-flex items-center"
@@ -48,7 +48,7 @@ export function SiteHeader() {
             LemonVerse
           </Link>
         </div>
-        <nav className="hidden flex-1 items-center justify-center gap-7 text-sm font-semibold tracking-[0.16em] text-muted uppercase lg:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-5 text-sm font-semibold tracking-[0.16em] text-muted uppercase lg:flex xl:gap-6">
           {headerLinks.map((link) => (
             <Link
               key={link.href}
@@ -63,7 +63,11 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 sm:flex">
-          <ButtonLink href="/pricing" variant="primary">
+          <ButtonLink
+            href="/pricing"
+            variant="primary"
+            className="shrink-0 whitespace-nowrap px-4 py-2.5 text-[0.78rem] tracking-[0.12em]"
+          >
             Begin your journey.
           </ButtonLink>
         </div>
@@ -85,7 +89,7 @@ export function SiteHeader() {
 
       {mobileOpen ? (
         <div className="border-t border-line/80 bg-background/95 lg:hidden">
-          <Container className="pb-4">
+          <Container className="max-w-[82rem] pb-4 xl:px-8 2xl:px-10">
             <nav className="grid gap-2 text-xs font-semibold tracking-[0.16em] text-muted uppercase">
               {headerLinks.map((link) => (
                 <Link
