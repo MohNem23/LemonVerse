@@ -131,7 +131,6 @@ export function HomePage() {
                 <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-gradient-to-t from-background/35 to-transparent" />
                 <div className="glass-panel floating-card relative overflow-hidden rounded-[2rem] surface-ring">
                   <Image
-                    loading="eager"
                     src={world.image.src}
                     alt={world.image.alt}
                     width={1200}
