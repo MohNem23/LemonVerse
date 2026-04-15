@@ -5,6 +5,14 @@ import { absoluteUrl, siteConfig } from "@/brand/site-metadata";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import "./globals.css";
 
+const socialImageAlt = `${siteConfig.name} immersive AI language learning`;
+const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
+
+const facebookAdmins = process.env.NEXT_PUBLIC_FACEBOOK_ADMINS
+  ?.split(",")
+  .map((item) => item.trim())
+  .filter(Boolean);
+
 export const metadata: Metadata = {
   metadataBase: new URL(absoluteUrl("/")),
   applicationName: siteConfig.name,
@@ -15,12 +23,18 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   alternates: {
     canonical: "/",
+    languages: {
+      "en-US": "/",
+    },
   },
   keywords: [...siteConfig.keywords],
   authors: [{ name: siteConfig.legalName }],
   creator: siteConfig.legalName,
   publisher: siteConfig.legalName,
+  referrer: "strict-origin-when-cross-origin",
   category: "education",
+  classification: "Education Technology",
+  manifest: "/manifest.webmanifest",
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
@@ -38,7 +52,7 @@ export const metadata: Metadata = {
         url: absoluteUrl("/opengraph-image"),
         width: 1200,
         height: 630,
-        alt: siteConfig.defaultTitle,
+        alt: socialImageAlt,
       },
     ],
   },
@@ -46,7 +60,41 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.defaultTitle,
     description: siteConfig.description,
-    images: [absoluteUrl("/twitter-image")],
+    images: [
+      {
+        url: absoluteUrl("/twitter-image"),
+        alt: socialImageAlt,
+      },
+    ],
+    site: siteConfig.twitterHandle,
+    creator: siteConfig.twitterHandle,
+    siteId: siteConfig.twitterSiteId,
+    creatorId: siteConfig.twitterCreatorId,
+  },
+  facebook: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID
+    ? { appId: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID }
+    : facebookAdmins && facebookAdmins.length > 0
+      ? { admins: facebookAdmins }
+      : undefined,
+  pinterest: {
+    richPin: true,
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+    yahoo: process.env.NEXT_PUBLIC_YAHOO_SITE_VERIFICATION,
+    other: bingVerification ? { "msvalidate.01": bingVerification } : undefined,
+  },
+  appleWebApp: {
+    capable: true,
+    title: siteConfig.name,
+    statusBarStyle: "black-translucent",
+  },
+  appLinks: {
+    web: {
+      url: absoluteUrl("/"),
+      should_fallback: true,
+    },
   },
   robots: {
     index: true,
@@ -64,11 +112,18 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  other: {
+    "msapplication-TileColor": "#111317",
+    "apple-mobile-web-app-title": siteConfig.name,
+  },
 };
 
 export const viewport: Viewport = {
   colorScheme: "dark",
-  themeColor: "#111317",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#111317" },
+    { media: "(prefers-color-scheme: light)", color: "#f7f8fb" },
+  ],
 };
 
 export default function RootLayout({

@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/container";
 import { StructuredData } from "@/components/seo/structured-data";
 import { FaqList } from "@/components/shared/faq-list";
 import { extendedFaqs } from "@/content/faqs";
-import { breadcrumbJsonLd, buildMetadata, faqJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, buildMetadata, faqJsonLd, webPageJsonLd } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Frequently Asked Questions",
@@ -16,6 +16,12 @@ export default function FaqRoute() {
     <>
       <StructuredData
         data={[
+          webPageJsonLd({
+            title: "Frequently Asked Questions",
+            description:
+              "Read the most common questions about LemonVerse, including the two-world model, how the methodology works, what the family plan includes, and how to contact the team.",
+            path: "/faq",
+          }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
             { name: "FAQ", path: "/faq" },
