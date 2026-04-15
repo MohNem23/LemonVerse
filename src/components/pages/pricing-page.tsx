@@ -1,26 +1,8 @@
-import Image from "next/image";
 import { Container } from "@/components/layout/container";
 import { ButtonLink } from "@/components/shared/button-link";
 import { FaqList } from "@/components/shared/faq-list";
 import { pricingFaqs } from "@/content/faqs";
 import { pricingContent } from "@/content/pricing";
-
-const worlds = [
-  {
-    name: "LemonNoir",
-    audience: "Teens and adults",
-    description:
-      "High-stakes immersion where every conversation is a mission and every decision drives the story.",
-    image: pricingContent.personas[1].image,
-  },
-  {
-    name: "LemonGrove",
-    audience: "Children",
-    description:
-      "Narrator-led adventures built for curiosity, confidence, and real language absorption through play.",
-    image: pricingContent.personas[0].image,
-  },
-] as const;
 
 const offerMeta: Record<
   string,
@@ -55,138 +37,202 @@ const offerMeta: Record<
     cta: "CLAIM THE BUNDLE",
     bullets: [
       "Up to 5 Unique Profiles",
-      "Full access to both worlds",
+      "Full access to BOTH Worlds",
       "600+ Total Scenarios",
       "Shared Family Progress",
     ],
   },
 };
 
+const featureComparisonRows: Array<{
+  feature: string;
+  values: Record<string, string>;
+}> = [
+  {
+    feature: "Monthly Price",
+    values: {
+      "LemonGrove Solo": "$4.99 / month",
+      "LemonNoir Solo": "$5.99 / month",
+      "Unified Family Bundle": "$8.99 / month",
+    },
+  },
+  {
+    feature: "Plan Positioning",
+    values: {
+      "LemonGrove Solo": "For the Early Explorers",
+      "LemonNoir Solo": "For the Mystery Seekers",
+      "Unified Family Bundle": "The Household Standard",
+    },
+  },
+  {
+    feature: "Profile Limit",
+    values: {
+      "LemonGrove Solo": "1 Learner Profile",
+      "LemonNoir Solo": "1 Learner Profile",
+      "Unified Family Bundle": "Up to 5 Unique Profiles",
+    },
+  },
+  {
+    feature: "World Access",
+    values: {
+      "LemonGrove Solo": "Full access to LemonGrove",
+      "LemonNoir Solo": "Full access to LemonNoir",
+      "Unified Family Bundle": "Full access to BOTH Worlds",
+    },
+  },
+  {
+    feature: "Scenario Library",
+    values: {
+      "LemonGrove Solo": "400+ Discovery Quests",
+      "LemonNoir Solo": "200+ Cinematic Mysteries",
+      "Unified Family Bundle": "600+ Total Scenarios",
+    },
+  },
+  {
+    feature: "Signature Advantage",
+    values: {
+      "LemonGrove Solo": "100% Chatbot-free",
+      "LemonNoir Solo": "AI-Driven Roleplay",
+      "Unified Family Bundle": "Shared Family Progress",
+    },
+  },
+];
+
 export function PricingPage() {
   return (
     <div className="pb-24">
       <section className="screen-section py-14">
         <Container>
-          <div className="glass-panel dynamic-panel rounded-[2.6rem] p-8 surface-ring lg:p-12">
-            <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="rounded-[2.6rem] p-8 lg:p-12">
+            <div className=" gap-10 ">
               <div className="space-y-6">
                 <span className="eyebrow">{pricingContent.hero.eyebrow}</span>
-                <h1 className="max-w-3xl font-serif text-4xl font-bold text-foreground sm:text-6xl lg:text-7xl">
+                <h1 className="font-serif text-4xl font-bold text-foreground sm:text-6xl lg:text-7xl">
                   {pricingContent.hero.title}
                 </h1>
-                <p className="max-w-xl text-lg leading-8 text-muted">
+                <p className="text-lg leading-8 text-muted">
                   {pricingContent.hero.description}
                 </p>
-                <div className="grid gap-3 sm:grid-cols-3">
-                  {pricingContent.hero.summary.map((item) => (
-                    <div
-                      key={item}
-                      className="copy-stack floating-card rounded-[1.4rem] border border-line/80 bg-black/20 p-4 text-sm leading-7 text-foreground"
-                    >
-                      {item}
-                    </div>
-                  ))}
-                </div>
-                <div className="flex items-end gap-2">
-                  <span className="font-serif text-5xl font-bold text-foreground sm:text-6xl">
-                    {pricingContent.hero.price}
-                  </span>
-                  <span className="pb-2 text-sm font-semibold tracking-[0.16em] text-muted uppercase">
-                    {pricingContent.hero.cadence}
-                  </span>
-                </div>
-                <ButtonLink href="/contact" className="sm:min-w-56">
-                  Contact us
-                </ButtonLink>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {worlds.map((world, index) => (
-                  <article
-                    key={world.name}
-                    className={`copy-stack floating-card overflow-hidden rounded-[1.8rem] border border-line/80 bg-black/20 ${index === 1 ? "floating-card-alt" : ""}`}
-                  >
-                    <div className="relative">
-                      <Image
-                        src={world.image.src}
-                        alt={world.image.alt}
-                        width={800}
-                        height={1000}
-                        className="h-72 w-full object-cover"
-                      />
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-5">
-                        <p className="text-xs font-semibold tracking-[0.16em] text-primary uppercase">
-                          {world.audience}
-                        </p>
-                        <h2 className="mt-2 font-serif text-2xl font-bold text-foreground">
-                          {world.name}
-                        </h2>
-                      </div>
-                    </div>
-                    <div className="space-y-3 p-5 text-sm leading-7 text-muted">
-                      <p>{world.description}</p>
-                    </div>
-                  </article>
-                ))}
               </div>
             </div>
           </div>
         </Container>
       </section>
+      <section className="py-1">
+        <Container>
+          <div className="flex flex-col items-center justify-center gap-3 text-center">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
+              Scroll to compare plans
+            </span>
+
+            <div className="relative flex h-12 w-7 items-start justify-center rounded-full border border-line/80 bg-background/60 p-1">
+              <div className="h-2.5 w-2.5 animate-bounce rounded-full bg-primary" />
+            </div>
+
+            <div className="h-10 w-px bg-gradient-to-b from-primary/50 to-transparent" />
+          </div>
+        </Container>
+      </section>
 
       <section className="screen-section py-16">
-        <Container className="space-y-8">
+        <Container className="space-y-10">
           <div className="space-y-4">
             <span className="eyebrow">Choose your path</span>
             <h2 className="font-serif text-4xl font-bold text-foreground sm:text-5xl">
               Compare solo access with the Unified Family Bundle.
             </h2>
             <p className="max-w-2xl text-base leading-8 text-muted">
-              Three plans. One goal: keep you inside the story long enough for fluency to become second nature.
+              Three plans. One goal: keep you inside the story long enough for
+              fluency to become second nature.
             </p>
           </div>
-          <div className="grid gap-6 lg:grid-cols-3">
-            {pricingContent.offers.map((offer, index) => {
-              const featured = offer.name === "Unified Family Bundle";
-              const meta = offerMeta[offer.name];
 
-              return (
-                <article
-                  key={offer.name}
-                  className={`copy-stack floating-card rounded-[2rem] p-7 ${featured ? "glass-panel border border-primary/30 shadow-2xl" : "border border-line/80 bg-black/20"} ${index === 1 ? "floating-card-alt" : ""}`}
-                >
-                  <span className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
-                    {meta.subtitle}
-                  </span>
-                  <h3 className="mt-4 font-serif text-3xl font-bold text-foreground">
-                    {offer.name}
-                  </h3>
-                  <p className="mt-5 font-serif text-5xl font-bold text-foreground">
-                    {offer.price}
-                    <span className="ml-2 text-base font-semibold text-muted">/ month</span>
-                  </p>
-                  <p className="mt-5 text-sm leading-7 text-muted">
-                    {offer.description}
-                  </p>
-                  <ul className="mt-6 grid gap-2">
-                    {meta.bullets.map((label) => (
-                      <li
-                        key={label}
-                        className="rounded-[1.2rem] border border-line/80 bg-black/20 px-3 py-2 text-xs font-semibold tracking-[0.08em] text-foreground"
+          <div className="overflow-x-auto">
+            <div className="min-w-[900px] rounded-[2rem] border border-line/70 bg-background/40 backdrop-blur-sm">
+              {/* Header */}
+              <div className="grid grid-cols-[1.1fr_repeat(3,minmax(0,1fr))] border-b border-line/70">
+                <div className="px-6 py-6" />
+
+                {pricingContent.offers.map((offer) => {
+                  const featured = offer.name === "Unified Family Bundle";
+                  const meta = offerMeta[offer.name];
+
+                  return (
+                    <div
+                      key={offer.name}
+                      className={`px-6 py-6 ${
+                        featured ? "bg-primary/[0.04]" : ""
+                      }`}
+                    >
+                      <p
+                        className={`text-[11px] font-semibold uppercase tracking-[0.18em] ${
+                          featured ? "text-primary" : "text-muted"
+                        }`}
                       >
-                        {label}
-                      </li>
-                    ))}
-                  </ul>
-                  <ButtonLink
-                    href="/contact"
-                    className="mt-6 w-full"
-                    variant={featured ? "primary" : "secondary"}
+                        {meta.subtitle}
+                      </p>
+
+                      <h3 className="mt-3 font-serif text-2xl font-bold text-foreground">
+                        {offer.name}
+                      </h3>
+
+                      <p className="mt-4 font-serif text-4xl font-bold text-foreground">
+                        {offer.price}
+                        <span className="ml-2 text-sm font-medium text-muted">
+                          / month
+                        </span>
+                      </p>
+
+                      <p className="mt-4 text-sm leading-7 text-muted">
+                        {offer.description}
+                      </p>
+
+                      <ButtonLink
+                        href="/contact"
+                        className="mt-6 w-full"
+                        variant={featured ? "primary" : "secondary"}
+                      >
+                        {meta.cta}
+                      </ButtonLink>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Feature rows */}
+              <div className="divide-y divide-line/70">
+                {featureComparisonRows.map((row) => (
+                  <div
+                    key={row.feature}
+                    className="grid grid-cols-[1.1fr_repeat(3,minmax(0,1fr))]"
                   >
-                    {meta.cta}
-                  </ButtonLink>
-                </article>
-              );
-            })}
+                    <div className="px-6 py-4 text-sm font-medium text-foreground">
+                      {row.feature}
+                    </div>
+
+                    {pricingContent.offers.map((offer) => {
+                      const featured = offer.name === "Unified Family Bundle";
+                      const value = row.values[offer.name] ?? "—";
+
+                      return (
+                        <div
+                          key={`${offer.name}-${row.feature}`}
+                          className={`px-6 py-4 ${
+                            featured ? "bg-primary/[0.04]" : ""
+                          }`}
+                        >
+                          <div className="flex items-center justify-center lg:justify-start">
+                            <span className="text-sm font-semibold text-foreground">
+                              {value}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </Container>
       </section>
@@ -202,62 +248,18 @@ export function PricingPage() {
             </p>
             <ul className="mt-6 grid gap-3 text-sm leading-7 text-foreground lg:grid-cols-3">
               <li className="rounded-[1.2rem] border border-line/80 bg-black/20 p-4">
-                Shared progress, individual journeys across ages and worlds.
+                Shared Progress, Individual Journeys: Dad solves a mystery in
+                Madrid while the kids explore the bioluminescent reefs of Mars.
               </li>
               <li className="rounded-[1.2rem] border border-line/80 bg-black/20 p-4">
-                The 600-scenario vault from years of hand-crafted mission design.
+                The 600-Scenario Vault: Access every hand-crafted mission
+                we&apos;ve built over the last 7 years.
               </li>
               <li className="rounded-[1.2rem] border border-line/80 bg-black/20 p-4">
-                Zero hidden fees. Cancel any time with no per-lesson upsells.
+                Zero Hidden Fees: Cancel any time. No &quot;per-lesson&quot;
+                charges. No upsells.
               </li>
             </ul>
-          </div>
-        </Container>
-      </section>
-
-      <section className="screen-section py-16">
-        <Container className="space-y-8">
-          <div className="space-y-4">
-            <span className="eyebrow">The Comparison</span>
-            <h2 className="font-serif text-4xl font-bold text-foreground sm:text-5xl">
-              Feature-by-feature plan snapshot.
-            </h2>
-          </div>
-          <div className="grid gap-4 lg:grid-cols-3">
-            {["LemonNoir Solo", "LemonGrove Solo", "Unified Family Bundle"].map(
-              (plan) => (
-                <article
-                  key={plan}
-                  className="copy-stack floating-card rounded-[1.6rem] border border-line/80 bg-black/20 p-5"
-                >
-                  <p className="text-xs font-semibold tracking-[0.16em] text-primary uppercase">
-                    {plan}
-                  </p>
-                  <ul className="mt-4 space-y-3 text-sm leading-7 text-muted">
-                    {pricingContent.comparisonRows.map((row) => {
-                      const value =
-                        plan === "LemonNoir Solo"
-                          ? row.noirSolo
-                          : plan === "LemonGrove Solo"
-                            ? row.groveSolo
-                            : row.bundle;
-
-                      return (
-                        <li
-                          key={row.feature}
-                          className="flex items-start justify-between gap-4 border-b border-line/60 pb-3 last:border-b-0 last:pb-0"
-                        >
-                          <span className="text-foreground">{row.feature}</span>
-                          <span className="text-right font-semibold text-foreground">
-                            {value}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </article>
-              ),
-            )}
           </div>
         </Container>
       </section>

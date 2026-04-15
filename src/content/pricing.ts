@@ -88,5 +88,5 @@ export const pricingContent = {
     },
   ],
   banner:
-    "The math is simple. For less than the price of two solo coffees, your entire household gets a private language ecosystem. That's $1.80 per person per month for unlimited immersion.",
+    "The math is simple. For less than the price of two solo coffees, your entire household gets a private language ecosystem. That's $1.80 per person per month for unlimited immersion. No more fighting over screen time. Now, everyone has their own world.",
 };

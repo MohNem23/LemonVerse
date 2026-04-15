@@ -3,11 +3,11 @@ export const methodologyContent = {
     eyebrow: "Narrative immersion methodology",
     title: "Language isn't learned. It's acquired.",
     description:
-      "The language learning industry is built on a lie: that if you click enough buttons and memorize enough flashcards, you'll eventually speak. Fluency doesn't live in a textbook; it lives in a story. LemonVerse is built around Narrative Immersion, where learners stay inside a coherent world long enough for words, tone, and context to become a natural reflex.",
+      "The language learning industry is built on a lie: that if you click enough buttons and memorize enough flashcards, you'll eventually \"speak.\" But fluency doesn't live in a textbook; it lives in a story. LemonVerse is the first platform built around Narrative Immersion, where learners stay inside a coherent world long enough for words, tone, and context to become a natural reflex.",
     summary: [
-      "Context over rules: We teach the why through the what.",
-      "Meaning over memorization: Interactions guide understanding, not rote recall.",
-      "The 600-scenario moat: Every scene is hand-crafted to keep you moving forward.",
+      "Context over Rules: We teach the \"Why\" through the \"What.\"",
+      "Meaning over Memorization: Interactions guide understanding, not just rote recall.",
+      "The 600-Scenario Moat: Every scene is hand-crafted to keep you moving forward",
     ],
     image: {
       src: "/media/methodology/irena-portrait.jpg",
@@ -19,53 +19,53 @@ export const methodologyContent = {
   shift: {
     title: "Why traditional apps fail (and why we don't).",
     description:
-      "Traditional apps optimize for streaks and short-term dopamine hits. LemonVerse optimizes for Narrative Continuity, the same way you remember the plot of your favorite movie years later, but forget a grocery list in minutes.",
+      "Traditional apps optimize for \"streaks\" and short-term dopamine hits. LemonVerse optimizes for Narrative Continuity, the same way you remember the plot of your favorite movie years later, but forget a grocery list in minutes.",
     columns: [
       {
-        title: "The old way",
+        title: "The Old Way",
         body:
-          "Traditional products focus on isolated vocabulary and translation pressure, then call repetition progress.",
+          "The old system rewards repetition, not real conversational ability.",
         bullets: [
-          "Isolated flashcards and apple or bread loops",
+          "Isolated flashcards and \"Apple/Bread\" loops.",
           "High pressure to translate back into your native tongue",
-          "Progress measured by XP and repetition",
-          "The result: a graveyard of half-finished streaks",
+          "Progress measured by \"XP\" and repetition.",
+          "The result: A graveyard of half-finished streaks.",
         ],
       },
       {
-        title: "The LemonVerse way",
+        title: "The LemonVerse Way",
         body:
-          "LemonVerse uses recurring characters, emotional stakes, and purposeful action so language is lived, not memorized.",
+          "Narrative continuity turns language from a subject into an instinct.",
         bullets: [
-          "High-stakes scenes with recurring characters",
-          "Direct meaning attached to action and emotion",
-          "Progress measured by plot and solved mysteries",
-          "The result: the fluency reflex",
+          "High-Stakes Scenes with recurring characters.",
+          "Direct Meaning attached to action and emotion.",
+          "Progress measured by Plot and solved mysteries.",
+          "The Result: The \"Fluency Reflex.\"",
         ],
       },
     ],
   },
   pillars: [
     {
-      title: "1. Comprehensible input, staged carefully",
+      title: "1. Comprehensible Input, Staged Carefully",
       description:
-        "We use a zoned expansion model. Every scene in our 600+ library is designed to be 90% understandable, with 10% new challenge. This keeps learners in flow where language feels rewarding, not overwhelming.",
+        "We use a \"Zoned Expansion\" model. Every scene in our 600+ library is designed to be 90% understandable, with 10% new challenge. This keeps you in the Flow State, where the language is challenging enough to be rewarding, but clear enough to be effortless.",
     },
     {
-      title: "2. Emotional anchoring",
+      title: "2. Emotional Anchoring",
       description:
-        "You remember what you feel. By placing learners in tense LemonNoir interrogations or whimsical LemonGrove rescue missions, vocabulary is attached to adrenaline, laughter, and curiosity for faster recall.",
+        "You remember what you feel. By placing you in a tense LemonNoir interrogation or a whimsical LemonGrove rescue mission, we attach vocabulary to adrenaline, laughter, and curiosity. This \"Emotional Anchor\" ensures that recall happens instantly when you need it in the real world.",
     },
     {
-      title: "3. Narrative persistence",
+      title: "3. Narrative Persistence",
       description:
-        "Unlike random exercises, our stories have memory. Characters remember your choices across scenes, forcing the brain to treat language as a functional tool for survival and social connection.",
+        "Unlike random exercises, our stories have memory. The character you meet in Scene 1 remembers your choices in Scene 10. This persistence forces the brain to treat the language as a functional tool for survival and social connection.",
     },
   ],
   bento: {
     title: "How the Brain Maps a Second Voice",
     description:
-      "Our methodology is the result of 7 years and 2,000 student transformations. We've refined a narrative pedagogy that targets the brain's emotional centers and builds durable language reflexes.",
+      "Our methodology is the result of 7 years and 2,000 student transformations. We've refined a \"Narrative Pedagogy\" that targets the brain's emotional centers.",
     image: {
       src: "/media/methodology/neural-map.jpg",
       alt: "An abstract visualization of neural pathways glowing in blue and amber on a dark background.",

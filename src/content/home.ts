@@ -47,9 +47,9 @@ export const homeContent = {
         src: "/media/home/noir-scenario.jpg",
         alt: "A noir-style illustration of a suspicious gourmet meal lit dramatically on a dark table.",
       },
-      callout: "LemonNoir audience design",
+      callout: "LemonNori Audience Design",
       description:
-        "Step into LemonNoir, where every conversation moves the plot forward. Whether you're interrogating a suspect in a French villa, closing a high-stakes deal in Tokyo, or navigating a first date in Madrid, you are living through a masterfully scripted mystery.",
+        "Step into LemonNoir, where every conversation moves the plot forward. Whether you're interrogating a suspect in a French villa, closing a high-stakes deal in Tokyo, or navigating a first date in Madrid, you are living through a masterfully scripted mystery. Our AI acts as your scene partner, reacting in real-time to your choices, challenging your fluency, and making sure the only way to solve the case is to speak the language.",
       bullets: [
         "Interrogate suspects and solve case files",
         "Handle negotiation and interview pressure",
@@ -66,9 +66,9 @@ export const homeContent = {
         src: "/media/home/grove-fishtopus.jpg",
         alt: "A whimsical underwater dressing room where the Fishtopus character experiments with costumes and coral props.",
       },
-      callout: "LemonGrove audience design",
+      callout: "LemonGrove Audience Design",
       description:
-        "In LemonGrove, children don't study; they explore. Their choices unlock new paths and their curiosity builds real-world vocabulary in a living storybook designed for natural absorption through play.",
+        "In LemonGrove, children don't study; they explore. We've designed these worlds, from bioluminescent reefs to Mars outposts, to be the ultimate language playground. Your child interacts with a living storybook where their choices unlock new paths and their curiosity builds real-world vocabulary. It's an immersive adventure where 'screen time' is active, safe, and focused on natural absorption through play.",
       bullets: [
         "Narrator-led quests built for ages 3-12",
         "Worlds from reefs to Mars and jungle expeditions",

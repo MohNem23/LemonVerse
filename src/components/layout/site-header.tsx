@@ -39,13 +39,22 @@ export function SiteHeader() {
             className="h-9 w-9 object-contain sm:h-10 sm:w-10"
           />
         </Link>
+        <div className="hidden items-center gap-3 sm:flex">
+          <Link
+            href="/"
+            className="text-sm font-semibold tracking-[0.14em] text-primary uppercase transition hover:text-primary-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            aria-label="LemonVerse home"
+          >
+            LemonVerse
+          </Link>
+        </div>
         <nav className="hidden flex-1 items-center justify-center gap-7 text-sm font-semibold tracking-[0.16em] text-muted uppercase lg:flex">
           {headerLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "nav-link-chip transition hover:text-foreground",
+                "nav-link-chip transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                 isActive(link.href) && "nav-link-chip-active text-primary",
               )}
             >
@@ -61,7 +70,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-line/80 bg-black/30 p-2 text-foreground transition hover:border-primary/40 hover:text-primary lg:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-line/80 bg-black/30 p-3 text-foreground transition hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((current) => !current)}
@@ -84,7 +93,7 @@ export function SiteHeader() {
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className={cn(
-                    "nav-link-chip block px-4 py-3 transition hover:text-foreground",
+                    "nav-link-chip block px-4 py-3 transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/55 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                     isActive(link.href) && "nav-link-chip-active text-primary",
                   )}
                 >
