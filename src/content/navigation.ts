@@ -3,7 +3,7 @@ export const headerLinks = [
   { href: "/worlds", label: "Worlds" },
   { href: "/methodology", label: "Methodology" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/faq", label: "FAQ" },
+  // { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 

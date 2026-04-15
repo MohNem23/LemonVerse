@@ -4,9 +4,9 @@ import { homeFaqs } from "@/content/faqs";
 import { buildMetadata, faqJsonLd, serviceJsonLd, webPageJsonLd } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Immersive AI Language Learning for Kids, Teens, Adults, and Families",
+  title: "Don't Drill the Language. Live the Story.",
   description:
-    "LemonVerse is an AI-powered language-learning platform built around two core worlds: LemonGrove for children and LemonNoir for teens and adults, with shared family plans and guided immersion.",
+    "Unlock fluency through high-stakes immersion across LemonNoir and LemonGrove. LemonVerse replaces repetitive drills with interactive adventures for the whole family.",
   path: "/",
 });
 
@@ -24,7 +24,7 @@ export default function HomeRoute() {
           serviceJsonLd({
             title: "LemonVerse language immersion",
             description:
-              "LemonVerse is an AI-powered language-learning platform built around two core worlds, LemonGrove and LemonNoir, plus guided family learning.",
+              "LemonVerse unlocks fluency through narrative immersion in LemonNoir and LemonGrove, with one family-ready ecosystem and 600+ scenarios.",
             path: "/",
           }),
           faqJsonLd(homeFaqs),

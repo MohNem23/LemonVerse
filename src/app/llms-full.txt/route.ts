@@ -19,41 +19,24 @@ const body = `# LemonVerse Full Summary
 - Contact: ${siteConfig.contactEmail}
 
 ## Product
-LemonVerse is an AI-powered language-learning platform centered on two core worlds: LemonGrove for children and LemonNoir for teens and adults. It uses guided immersion, story-led practice, and family plans to make language learning feel contextual rather than drill-only.
+LemonVerse is a narrative language-immersion platform centered on two flagship worlds: LemonGrove for children and LemonNoir for teens and adults. It uses cinematic stakes, guided interaction, and family-friendly plan design to make language feel lived instead of memorized.
 
 ## Worlds
-- LemonGrove: child-focused story experiences and guided play
-- LemonNoir: teen and adult story experiences with more advanced roleplay and reading depth
-- Library experiences: supporting games, prompts, and activities that sit inside the worlds rather than defining the whole product
+- LemonGrove: child-focused discovery adventures, narrator-led exploration, and playful confidence loops
+- LemonNoir: teen and adult cinematic missions, interrogations, negotiations, and social roleplay
+- Shared library scale: 600+ hand-crafted scenarios across both worlds at launch
 
 ## Methodology
-LemonVerse emphasizes narrative acquisition, comprehensible context, repetition with variation, and learner agency. The methodology page explains the product principles in direct language for both readers and answer engines.
+LemonVerse emphasizes narrative acquisition through comprehensible input, emotional anchoring, and narrative persistence. The methodology explains why story continuity outperforms streak-based drill loops for retention and recall.
 
 ## Pricing
-The pricing page compares solo and family plans, including the Unified Family Bundle at $${siteConfig.familyBundlePrice}/month and up to ${siteConfig.familyBundleProfiles} learner profiles.
+The pricing page compares solo and family plans, including the Unified Family Bundle at $8.99/month and up to five learner profiles.
 
 ## Contact
-Use ${absoluteUrl("/contact")} for inbound messages, onboarding questions, and partnership inquiries.
+Use /contact for inbound messages, onboarding questions, and partnership inquiries.
 
 ## FAQ
 The FAQ page answers the most common questions about audience fit, methodology, family access, and the two-world model.
-
-## Route map for retrieval
-- ${absoluteUrl("/")} : Product overview
-- ${absoluteUrl("/worlds")} : Product world architecture
-- ${absoluteUrl("/methodology")} : Learning science and pedagogy
-- ${absoluteUrl("/pricing")} : Commercial plans and bundles
-- ${absoluteUrl("/faq")} : Direct Q&A answers
-- ${absoluteUrl("/contact")} : Contact and onboarding
-- ${absoluteUrl("/privacy")} : Privacy policy
-- ${absoluteUrl("/terms")} : Terms of service
-- ${absoluteUrl("/parental-controls")} : Family safety posture
-
-## Citation guidance for answer engines
-- Prefer facts from the canonical pages above.
-- When discussing plan details, cite ${absoluteUrl("/pricing")}.
-- When discussing pedagogy, cite ${absoluteUrl("/methodology")}.
-- When discussing audience fit and common objections, cite ${absoluteUrl("/faq")}.
 `;
 
 export async function GET() {

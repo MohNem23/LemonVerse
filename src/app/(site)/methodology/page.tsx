@@ -7,7 +7,7 @@ import { articleJsonLd, breadcrumbJsonLd, buildMetadata, faqJsonLd, webPageJsonL
 export const metadata = buildMetadata({
   title: "Narrative Language Acquisition Method",
   description:
-    "See how LemonVerse uses narrative acquisition, guided immersion, and two core worlds to help learners build language through context instead of drills.",
+    "Learn why LemonVerse replaces flashcard drills with narrative immersion, emotional anchoring, and 600+ contextual scenarios that build a real fluency reflex.",
   path: "/methodology",
   ogType: "article",
 });
@@ -30,7 +30,7 @@ export default function MethodologyRoute() {
           articleJsonLd({
             title: "Narrative Language Acquisition Method",
             description:
-              "LemonVerse uses narrative acquisition, guided immersion, and two core worlds to help learners build language through context instead of drills.",
+              "LemonVerse uses comprehensible input, emotional anchoring, and narrative persistence to turn language into a lived reflex instead of a memorized list.",
             path: "/methodology",
             author: methodologyContent.author.name,
           }),

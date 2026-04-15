@@ -9,7 +9,7 @@ export default function SiteLayout({
   return (
     <>
       <SiteHeader />
-      <main className="min-h-screen snap-y snap-mandatory pt-32">
+      <main className="min-h-screen snap-y snap-proximity pt-24">
         {children}
       </main>
       <SiteFooter />

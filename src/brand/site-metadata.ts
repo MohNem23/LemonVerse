@@ -35,9 +35,9 @@ export const siteConfig = {
   siteUrl: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? defaultSiteUrl),
   locale: "en_US",
   defaultTitle: "Immersive AI Language Learning for Kids, Teens, Adults, and Families",
-  tagline: "Where words become worlds.",
+  tagline: "Don't drill the language. Live the story.",
   description:
-    "LemonVerse is an AI-powered language-learning platform that teaches through story, roleplay, and guided immersion for children, teens, adults, and shared family plans.",
+    "LemonVerse unlocks fluency through high-stakes narrative immersion for children, teens, adults, and families across LemonGrove and LemonNoir.",
   keywords: [
     "AI language learning",
     "immersive language learning",
@@ -60,6 +60,7 @@ export const siteConfig = {
   twitterHandle: normalizeHandle(process.env.NEXT_PUBLIC_TWITTER_HANDLE),
   twitterSiteId: process.env.NEXT_PUBLIC_TWITTER_SITE_ID,
   twitterCreatorId: process.env.NEXT_PUBLIC_TWITTER_CREATOR_ID,
+
 } as const;
 
 export function getSiteUrl() {

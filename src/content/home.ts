@@ -1,23 +1,23 @@
 export const homeContent = {
   hero: {
-    eyebrow: "Narrative AI language immersion",
-    title: "Where words become worlds.",
+    eyebrow: "Narrative immersion for the whole family",
+    title: "Don't drill the language. Live the story.",
     description:
-      "LemonVerse turns language learning into story-led immersion for children, teens, adults, and families. The flagship worlds are LemonGrove for children and LemonNoir for teens and adults, with individual games and scenarios living inside each library.",
+      "Unlock fluency through high-stakes immersion. From solving cinematic mysteries in LemonNoir to leading safari expeditions in LemonGrove, we've replaced repetitive drills with interactive adventures designed for the whole family.",
     summary: [
-      "AI-guided dialogue and scenario practice",
-      "Two flagship worlds with library titles inside each one",
-      "Five learner profiles in the unified family plan",
+      "Two flagship worlds built for different ages",
+      "600+ battle-tested scenarios at launch",
+      "Up to five profiles in one family subscription",
     ],
-    primaryAction: { href: "/pricing", label: "See Pricing" },
-    secondaryAction: { href: "/methodology", label: "Read the Methodology" },
+    primaryAction: { href: "/pricing", label: "Begin your journey." },
+    secondaryAction: { href: "/methodology", label: "See how it works." },
     image: {
       src: "/media/home/hero-cinematic.jpg",
       alt: "A cinematic twilight landscape where floating books transform into glowing architecture above a surreal horizon.",
     },
   },
   factStrip: [
-    { label: "Library Titles", value: "24+" },
+    { label: "Scenario Library", value: "600+" },
     { label: "Family Profiles", value: "5" },
     { label: "Flagship Worlds", value: "2" },
     { label: "Bundle Price", value: "$8.99/mo" },
@@ -27,13 +27,13 @@ export const homeContent = {
       name: "LemonGrove",
       audience: "Children",
       description:
-        "Bright underwater adventures for children, with standalone games and scenarios inside the LemonGrove library rather than separate worlds.",
+        "We've designed these worlds, from bioluminescent reefs to Mars outposts, to be the ultimate language playground for children.",
     },
     {
       name: "LemonNoir",
       audience: "Teens and adults",
       description:
-        "High-stakes dialogue, mystery, and roleplay for older learners, with each named game or scenario treated as a title inside the LemonNoir library.",
+        "Step into cinematic mysteries where every conversation moves the plot forward and every fluent response unlocks the next clue.",
     },
   ],
   worlds: [
@@ -41,38 +41,38 @@ export const homeContent = {
       id: "worlds",
       name: "LemonNoir",
       audience: "Teens and adults",
-      title: "Master the language of intrigue.",
+      title: "Intrigue. Tension. Choice.",
       accent: "noir",
       image: {
         src: "/media/home/noir-scenario.jpg",
         alt: "A noir-style illustration of a suspicious gourmet meal lit dramatically on a dark table.",
       },
-      callout: "Library title: Scenario 042",
+      callout: "LemonNori Audience Design",
       description:
-        "Step into detective scenes, interviews, negotiations, and social roleplay where each named scenario is one title inside the LemonNoir library, not the whole world.",
+        "Step into LemonNoir, where every conversation moves the plot forward. Whether you're interrogating a suspect in a French villa, closing a high-stakes deal in Tokyo, or navigating a first date in Madrid, you are living through a masterfully scripted mystery. Our AI acts as your scene partner, reacting in real-time to your choices, challenging your fluency, and making sure the only way to solve the case is to speak the language.",
       bullets: [
-        "Job interview and professional dialogue simulations",
-        "Mystery-led story arcs with branching choices",
-        "Real-world language for persuasion, tension, and nuance",
+        "Interrogate suspects and solve case files",
+        "Handle negotiation and interview pressure",
+        "Use real-world social language under stakes",
       ],
     },
     {
       id: "grove",
       name: "LemonGrove",
       audience: "Children",
-      title: "Deep sea discoveries.",
+      title: "Curiosity without limits.",
       accent: "accent",
       image: {
         src: "/media/home/grove-fishtopus.jpg",
         alt: "A whimsical underwater dressing room where the Fishtopus character experiments with costumes and coral props.",
       },
-      callout: "Library title: Build a buddy",
+      callout: "LemonGrove Audience Design",
       description:
-        "Join Fishtopus in an underwater world where each cave, creature, and collectible belongs to a larger LemonGrove library of titles, games, and scenarios for children.",
+        "In LemonGrove, children don't study; they explore. We've designed these worlds, from bioluminescent reefs to Mars outposts, to be the ultimate language playground. Your child interacts with a living storybook where their choices unlock new paths and their curiosity builds real-world vocabulary. It's an immersive adventure where 'screen time' is active, safe, and focused on natural absorption through play.",
       bullets: [
-        "Custom avatars and buddy building",
-        "Interactive stories with child-friendly pacing",
-        "Playful repetition anchored to characters and places",
+        "Narrator-led quests built for ages 3-12",
+        "Worlds from reefs to Mars and jungle expeditions",
+        "Active, safe screen time with language outcomes",
       ],
     },
   ],
@@ -88,14 +88,14 @@ export const homeContent = {
       "Generative-engine friendly summary: LemonVerse combines AI tutoring, group accountability, and story-based practice inside one language-learning ecosystem.",
   },
   bundle: {
-    title: "Unified Family Bundle",
+    title: "A single subscription for the entire family.",
     description:
-      "One subscription connects child-first play in LemonGrove, teen and adult immersion in LemonNoir, and the broader title library for the whole household.",
+      "Access the full library of LemonNoir mysteries and LemonGrove adventures for up to five profiles. Shared progress, individual journeys.",
     features: [
       "Up to five unique learner profiles",
-      "Access to all 24+ library titles",
-      "AI performance tracking and progress snapshots",
+      "Full access to both flagship worlds",
+      "600+ scenarios across child and adult journeys",
     ],
-    cta: { href: "/pricing", label: "Claim the Bundle" },
+    cta: { href: "/pricing", label: "See the Family Bundle" },
   },
 };

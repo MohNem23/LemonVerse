@@ -5,7 +5,7 @@ import { breadcrumbJsonLd, buildMetadata, webPageJsonLd } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Contact Us",
   description:
-    "Contact LemonVerse about demos, partnerships, schools, press, family accounts, or launch questions.",
+    "Contact LemonVerse for family support, school pilots, partnerships, and press inquiries. Every message is reviewed by a real team member.",
   path: "/contact",
 });
 
