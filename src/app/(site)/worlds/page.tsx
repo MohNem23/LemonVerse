@@ -5,7 +5,7 @@ import { breadcrumbJsonLd, buildMetadata, serviceJsonLd } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Language Learning Worlds",
   description:
-    "Explore LemonVerse's two-world model: LemonGrove for children and LemonNoir for teens and adults, where scenarios and games are library entries inside each world.",
+    "Explore LemonVerse's two flagship worlds, LemonNoir and LemonGrove, with over 600 hand-crafted scenarios designed to move learners from study mode to lived fluency.",
   path: "/worlds",
 });
 
@@ -21,7 +21,7 @@ export default function WorldsRoute() {
           serviceJsonLd({
             title: "LemonVerse story worlds",
             description:
-              "Explore LemonVerse's two-world model: LemonGrove for children and LemonNoir for teens and adults, with scenarios and games treated as entries in each world library.",
+              "LemonNoir delivers cinematic immersion for teens and adults, while LemonGrove delivers curiosity-led discovery for children, all inside one narrative ecosystem.",
             path: "/worlds",
           }),
         ]}

@@ -5,23 +5,51 @@ import { ButtonLink } from "@/components/shared/button-link";
 const worlds = [
   {
     name: "LemonNoir",
-    audience: "Teens and adults",
-    title: "A mature world for intrigue, conversation, and social stakes.",
+    audience: "Teens & Adults",
+    title: "LemonNoir is a world built for consequence.",
     description:
-      "LemonNoir is the world. Inside it, the library contains scenarios, games, and story beats that teach through pressure, nuance, and choice.",
+      "Here, the story doesn't move unless you speak. Designed for those who need real-world confidence, this is high-stakes immersion where every conversation is a mission.",
     image: "/media/home/noir-scenario.jpg",
     alt: "A noir-style scene showing a tense dinner moment in dramatic light.",
-    entries: ["Mystery cases", "Interview scenes", "Negotiation loops"],
+    entries: [
+      "The Noir Library: 200+ cinematic scenarios",
+      "The Case Files: interrogate suspects and solve mysteries",
+      "The Boardroom: interviews and negotiations for the international stage",
+      "The Social: high-stakes real-world moments from dates to travel crises",
+    ],
   },
   {
     name: "LemonGrove",
-    audience: "Children",
-    title: "A playful world for first words, rhythm, and repetition.",
+    audience: "Children 3-12",
+    title: "Where curiosity becomes fluency.",
     description:
-      "LemonGrove is the world. Fishtopus is one library entry inside a larger child-friendly set of scenarios and games.",
+      "LemonGrove is a world of endless wonder. We've replaced the homework feel of traditional apps with a safe, narrator-led discovery engine. Children don't follow a curriculum; they follow their curiosity.",
     image: "/media/home/grove-fishtopus.jpg",
     alt: "An underwater scene with a whimsical character exploring a colorful reef.",
-    entries: ["Fishtopus quests", "Sound games", "Buddy building"],
+    entries: [
+      "The Grove Library: 400+ immersive adventures",
+      "The Explorer's Path: from coral reefs to Mars outposts and the Amazon",
+      "The Creator's Studio: baking, design, and role-based creative missions",
+      "The Discovery Loops: rhythm games and buddy-building confidence loops",
+    ],
+  },
+] as const;
+
+const worldEngine = [
+  {
+    title: "Cinematic Scenarios",
+    description:
+      "Guided scenes from detective beats to travel tasks that move the world forward and force you to use language to progress.",
+  },
+  {
+    title: "Immersive Interactions",
+    description:
+      "Short, high-frequency loops like rhythm games, memory plays, and character-driven mini-games that reinforce your vocabulary without breaking immersion.",
+  },
+  {
+    title: "The 600+ Promise",
+    description:
+      "With a launch library of over 600 battle-tested scenarios, LemonVerse provides the variety needed for true retention. You never have to solve the same mystery twice.",
   },
 ] as const;
 
@@ -33,17 +61,15 @@ export function WorldsPage() {
           <div className="space-y-6">
             <span className="eyebrow">Worlds</span>
             <h1 className="max-w-3xl font-serif text-5xl font-bold text-foreground sm:text-6xl lg:text-7xl">
-              Two worlds, many library entries.
+              Two Worlds. Unlimited Journeys.
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-muted">
-              LemonNoir and LemonGrove are the worlds. Scenarios and games are
-              the entries inside the library that powers each world, which keeps
-              the product model clear and expandable.
+              LemonVerse is an ecosystem of immersion. We&apos;ve built two distinct flagship worlds, LemonNoir and LemonGrove, designed to bridge the gap between studying a language and actually living in it.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/pricing">See Pricing</ButtonLink>
-              <ButtonLink href="/methodology" variant="secondary">
-                Read the Method
+              <ButtonLink href="/methodology">Explore the Methodology</ButtonLink>
+              <ButtonLink href="/pricing" variant="secondary">
+                See the Family Bundle
               </ButtonLink>
             </div>
           </div>
@@ -62,16 +88,6 @@ export function WorldsPage() {
                 <p className="mt-4 text-sm leading-7 text-muted">
                   {world.description}
                 </p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {world.entries.map((entry) => (
-                    <span
-                      key={entry}
-                      className="rounded-full border border-line/80 bg-black/20 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-foreground"
-                    >
-                      {entry}
-                    </span>
-                  ))}
-                </div>
               </article>
             ))}
           </div>
@@ -107,8 +123,8 @@ export function WorldsPage() {
                   </p>
                   <p className="mt-2">
                     {index === 0
-                      ? "Tone: high-stakes, precise, and conversational."
-                      : "Tone: playful, rhythmic, and easy to repeat."}
+                      ? "Every conversation drives the mission."
+                      : "Every choice opens a new path."}
                   </p>
                 </div>
               </div>
@@ -123,16 +139,13 @@ export function WorldsPage() {
               <p className="text-base leading-8 text-muted">
                 {world.description}
               </p>
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-4">
                 {world.entries.map((entry, entryIndex) => (
                   <div
                     key={entry}
-                    className={`rounded-[1.4rem] border border-line/80 bg-black/20 p-4 ${entryIndex === 1 ? "floating-card-alt" : "floating-card"}`}
+                    className={`rounded-[1.4rem] border border-line/80 bg-black/20 p-4 ${entryIndex % 2 === 0 ? "floating-card" : "floating-card-alt"}`}
                   >
-                    <p className="text-xs font-semibold tracking-[0.16em] text-muted uppercase">
-                      Library entry
-                    </p>
-                    <p className="mt-3 text-sm font-semibold leading-6 text-foreground">
+                    <p className="text-sm font-semibold leading-7 text-foreground">
                       {entry}
                     </p>
                   </div>
@@ -146,38 +159,29 @@ export function WorldsPage() {
       <section className="screen-section py-16">
         <Container>
           <div className="glass-panel dynamic-panel rounded-[2.4rem] p-8 surface-ring lg:p-12">
-            <div className="grid gap-6 lg:grid-cols-2">
-              <div className="space-y-4">
-                <span className="eyebrow">Library model</span>
-                <h2 className="font-serif text-4xl font-bold text-foreground">
-                  A world is bigger than any single game.
-                </h2>
-                <p className="text-base leading-8 text-muted">
-                  The game or scenario you see on screen is only one entry in
-                  the library. Each world can contain multiple entry types, from
-                  short interactions to longer story loops.
-                </p>
-              </div>
-              <div className="grid gap-4">
-                <article className="copy-stack floating-card rounded-[1.6rem] border border-line/80 bg-black/20 p-5">
+            <div className="space-y-4">
+              <span className="eyebrow">The engine behind the story</span>
+              <h2 className="font-serif text-4xl font-bold text-foreground">
+                What Makes a World work.
+              </h2>
+              <p className="max-w-3xl text-base leading-8 text-muted">
+                When you enter a LemonVerse world you are accessing a deep, intelligent library of content that adapts to your growth.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 lg:grid-cols-3">
+              {worldEngine.map((item, index) => (
+                <article
+                  key={item.title}
+                  className={`copy-stack rounded-[1.6rem] border border-line/80 bg-black/20 p-5 ${index === 1 ? "floating-card-alt" : "floating-card"}`}
+                >
                   <h3 className="font-serif text-2xl font-bold text-foreground">
-                    Scenarios
+                    {item.title}
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-muted">
-                    Interview rooms, detective beats, travel tasks, and other
-                    guided scenes that move the world forward.
+                    {item.description}
                   </p>
                 </article>
-                <article className="copy-stack floating-card-alt rounded-[1.6rem] border border-line/80 bg-black/20 p-5">
-                  <h3 className="font-serif text-2xl font-bold text-foreground">
-                    Games
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-muted">
-                    Rhythm loops, memory plays, and character-driven mini games
-                    that sit inside the world rather than replacing it.
-                  </p>
-                </article>
-              </div>
+              ))}
             </div>
           </div>
         </Container>

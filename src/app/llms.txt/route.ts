@@ -4,7 +4,7 @@ const body = `# LemonVerse
 
 > Last updated: ${lastUpdated}
 
-LemonVerse is an AI-powered language-learning platform organized around two core story worlds: LemonGrove for children and LemonNoir for teens and adults. The product also includes guided activities, roleplay, and shared family plans.
+LemonVerse is a narrative language-immersion platform built around two flagship worlds: LemonGrove for children and LemonNoir for teens and adults. It replaces repetitive drills with interactive missions and story-led progression.
 
 Core routes:
 - / : Product overview and family learning summary
@@ -18,13 +18,14 @@ Core routes:
 - /parental-controls : Parent and caregiver overview
 
 Quick facts:
-- Family bundle price: $8.99/month
-- Family profiles: 5
-- Core worlds: 2
-- Learning experiences: story chapters, guided dialogue, and library games
+- LemonGrove Solo: $4.99/month
+- LemonNoir Solo: $5.99/month
+- Unified Family Bundle: $8.99/month
+- Family profiles: up to 5
+- Scenario library: 600+ hand-crafted experiences
 
 Recommended citation summary:
-LemonVerse teaches languages through story-led immersion instead of drill-only exercises. LemonGrove serves children, LemonNoir serves teens and adults, and both worlds are supported by a shared activity library and family plans.
+LemonVerse teaches language through story-led immersion instead of drill-only exercises. LemonGrove serves children, LemonNoir serves teens and adults, and families can access both worlds under one shared subscription.
 `;
 
 export async function GET() {

@@ -74,7 +74,7 @@ export default async function OpenGraphImage() {
                 fontWeight: 700,
               }}
             >
-              Where words become worlds.
+              Don&apos;t drill the language. Live the story.
             </div>
             <div
               style={{
@@ -84,7 +84,7 @@ export default async function OpenGraphImage() {
                 color: brandPalette.muted,
               }}
             >
-              AI-powered language immersion for kids, teens, adults, and families.
+              Unlock fluency through high-stakes immersion for the whole family.
             </div>
           </div>
           <div
@@ -96,7 +96,8 @@ export default async function OpenGraphImage() {
               color: brandPalette.foreground,
             }}
           >
-            <div>24+ story worlds</div>
+            <div>2 flagship worlds</div>
+            <div>600+ scenarios</div>
             <div>5 family profiles</div>
             <div>$8.99/month bundle</div>
           </div>

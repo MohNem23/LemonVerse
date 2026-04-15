@@ -1,81 +1,83 @@
 export const methodologyContent = {
   hero: {
-    eyebrow: "How LemonVerse works",
-    title: "Language isn’t learned. It’s acquired.",
+    eyebrow: "Narrative immersion methodology",
+    title: "Language isn't learned. It's acquired.",
     description:
-      "LemonVerse is built around narrative immersion: learners stay inside a coherent world long enough for words, tone, and context to stick naturally.",
+      "The language learning industry is built on a lie: that if you click enough buttons and memorize enough flashcards, you'll eventually speak. Fluency doesn't live in a textbook; it lives in a story. LemonVerse is built around Narrative Immersion, where learners stay inside a coherent world long enough for words, tone, and context to become a natural reflex.",
     summary: [
-      "Story context comes before rules",
-      "Interactions guide meaning, not just memorization",
-      "Every scene is designed to keep learners moving forward",
+      "Context over rules: We teach the why through the what.",
+      "Meaning over memorization: Interactions guide understanding, not rote recall.",
+      "The 600-scenario moat: Every scene is hand-crafted to keep you moving forward.",
     ],
     image: {
       src: "/media/methodology/irena-portrait.jpg",
-      alt: "A thoughtful portrait of Irena, LemonVerse's chief narrative architect.",
+      alt: "A parent portrait used in the LemonVerse methodology testimonial section.",
     },
     quote:
-      "Today she played with her Barbie in English. She didn’t even notice. That was the moment I knew she had stopped translating and started living.",
+      "Today she played with her Barbie in English. She didn't even notice. That was the moment I knew she had stopped translating and started living.",
   },
   shift: {
-    title: "The scientific shift",
+    title: "Why traditional apps fail (and why we don't).",
     description:
-      "Traditional apps optimize for streaks and short loops. LemonVerse optimizes for narrative continuity, contextual recall, and a sense of being inside the language.",
+      "Traditional apps optimize for streaks and short-term dopamine hits. LemonVerse optimizes for Narrative Continuity, the same way you remember the plot of your favorite movie years later, but forget a grocery list in minutes.",
     columns: [
       {
-        title: "Drill-first apps",
+        title: "The old way",
         body:
-          "Flashcards and isolated exercises can build familiarity, but they often separate language from the social situations where it needs to be used.",
+          "Traditional products focus on isolated vocabulary and translation pressure, then call repetition progress.",
         bullets: [
-          "Short-term memorization pressure",
-          "Translation loops between native and target language",
-          "Progress measured mainly by repetition count",
+          "Isolated flashcards and apple or bread loops",
+          "High pressure to translate back into your native tongue",
+          "Progress measured by XP and repetition",
+          "The result: a graveyard of half-finished streaks",
         ],
       },
       {
-        title: "Narrative immersion",
+        title: "The LemonVerse way",
         body:
-          "LemonVerse uses scenes, stakes, and recurring characters so learners attach meaning to action, not only to isolated vocabulary prompts.",
+          "LemonVerse uses recurring characters, emotional stakes, and purposeful action so language is lived, not memorized.",
         bullets: [
-          "Context-rich dialogue and roleplay",
-          "Familiar settings plus manageable novelty",
-          "Feedback woven into the story loop",
+          "High-stakes scenes with recurring characters",
+          "Direct meaning attached to action and emotion",
+          "Progress measured by plot and solved mysteries",
+          "The result: the fluency reflex",
         ],
       },
     ],
   },
   pillars: [
     {
-      title: "Comprehensible input, staged carefully",
+      title: "1. Comprehensible input, staged carefully",
       description:
-        "Each world introduces new language through scenes that still feel legible. Learners are pushed, but never so far that meaning collapses.",
+        "We use a zoned expansion model. Every scene in our 600+ library is designed to be 90% understandable, with 10% new challenge. This keeps learners in flow where language feels rewarding, not overwhelming.",
     },
     {
-      title: "Emotional anchoring",
+      title: "2. Emotional anchoring",
       description:
-        "Characters, tension, and playful stakes make repetition feel purposeful. That emotional frame gives recall a better chance of sticking.",
+        "You remember what you feel. By placing learners in tense LemonNoir interrogations or whimsical LemonGrove rescue missions, vocabulary is attached to adrenaline, laughter, and curiosity for faster recall.",
     },
     {
-      title: "Flow over friction",
+      title: "3. Narrative persistence",
       description:
-        "The system aims to keep challenge and confidence aligned so learners remain present instead of bouncing between guesswork and boredom.",
+        "Unlike random exercises, our stories have memory. Characters remember your choices across scenes, forcing the brain to treat language as a functional tool for survival and social connection.",
     },
   ],
   bento: {
-    title: "How the brain maps a second voice.",
+    title: "How the Brain Maps a Second Voice",
     description:
-      "LemonVerse is inspired by research around comprehensible input and flow-based practice. The product goal is to make input understandable, emotional, and repeatable without flattening it into flashcards.",
+      "Our methodology is the result of 7 years and 2,000 student transformations. We've refined a narrative pedagogy that targets the brain's emotional centers and builds durable language reflexes.",
     image: {
       src: "/media/methodology/neural-map.jpg",
       alt: "An abstract visualization of neural pathways glowing in blue and amber on a dark background.",
     },
     stat: {
-      value: "Story-led",
-      label: "practice instead of drill-only repetition",
+      value: "2,000+",
+      label: "student transformations across seven years",
     },
     sideCard: {
-      title: "Feedback inside the scene",
+      title: "The fluency reflex",
       description:
-        "Prompts, reflection, and branching responses keep learners inside the moment instead of breaking the illusion every few seconds.",
+        "When context, emotion, and narrative memory align, language recall becomes instant and usable in real-life conversations.",
       image: {
         src: "/media/methodology/flow-state.jpg",
         alt: "A minimalist 3D sphere with geometric reflections under soft studio light.",
@@ -83,7 +85,7 @@ export const methodologyContent = {
     },
   },
   author: {
-    name: "Irena V.",
-    role: "Founder & A Mother",
+    name: "Shiran S.",
+    role: "Parent",
   },
 };

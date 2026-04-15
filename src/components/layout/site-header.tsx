@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import logoImage from "@/app/logo.png";
 import { Container } from "@/components/layout/container";
 import { ButtonLink } from "@/components/shared/button-link";
@@ -14,10 +14,6 @@ import { cn } from "@/lib/cn";
 export function SiteHeader() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -59,7 +55,7 @@ export function SiteHeader() {
         </nav>
         <div className="hidden items-center gap-3 sm:flex">
           <ButtonLink href="/pricing" variant="primary">
-            Get Started
+            Begin your journey.
           </ButtonLink>
         </div>
 
@@ -86,6 +82,7 @@ export function SiteHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  onClick={() => setMobileOpen(false)}
                   className={cn(
                     "nav-link-chip block px-4 py-3 transition hover:text-foreground",
                     isActive(link.href) && "nav-link-chip-active text-primary",
@@ -100,7 +97,7 @@ export function SiteHeader() {
               variant="primary"
               className="mt-4 w-full sm:hidden"
             >
-              Get Started
+              Begin your journey.
             </ButtonLink>
           </Container>
         </div>

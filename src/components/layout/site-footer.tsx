@@ -23,14 +23,20 @@ export function SiteFooter() {
               className="h-10 w-10 object-contain"
             />
           </Link>
+          <p className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
+            LemonVerse Narrative Systems
+          </p>
+          <p className="font-serif text-2xl font-bold text-foreground">
+            Two Worlds. 600+ Stories. One Household.
+          </p>
           <p className="max-w-xl text-sm leading-7 text-muted">
-            LemonVerse Narrative Systems builds AI-powered language immersion
-            through story worlds, roleplay, and family-friendly progression
-            across every age band.
+            LemonVerse replaces repetitive drills with high-stakes immersion. From the cinematic mysteries of LemonNoir to the whimsical adventures of LemonGrove, we build the narrative engines that turn language acquisition into a lifelong reflex.
           </p>
           <p className="text-xs font-semibold tracking-[0.16em] text-muted uppercase">
-            Built for language learning, family continuity, and long-term
-            retention.
+            Built by a teacher. Tested by 2,000 students. Loved by families.
+          </p>
+          <p className="text-xs font-semibold tracking-[0.16em] text-muted uppercase">
+            Story over streaks. Acquisition over memorization.
           </p>
         </div>
         {footerLinkGroups.map((group) => (
@@ -54,8 +60,7 @@ export function SiteFooter() {
         ))}
       </Container>
       <Container className="mt-10 border-t border-line/70 pt-6 text-xs tracking-[0.12em] text-muted uppercase">
-        © {year} LemonVerse Narrative Systems. Narrative-driven language
-        immersion.
+        &copy; {year} LemonVerse Narrative Systems. Narrative-driven language immersion.
       </Container>
     </footer>
   );

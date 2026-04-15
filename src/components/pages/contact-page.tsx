@@ -18,31 +18,45 @@ const initialState: ContactFormState = {
   name: "",
   email: "",
   organization: "",
-  topic: "General question",
+  topic: "For Families",
   message: "",
 };
 
-const highlights = [
+const contactTracks = [
   {
-    title: "Fast path",
-    body: "Demos, partnerships, school pilots, and press questions all land in one form.",
+    title: "For Families",
+    body: "Need help with your subscription? Curious about a specific scenario in the library? Our team is ready to assist.",
   },
   {
-    title: "Human reply",
-    body: "We will route the message to the right team once delivery details are wired in.",
+    title: "For Educators",
+    body: "Interested in bringing Narrative Immersion to your classroom? We are currently selecting partners for our school pilot programs.",
   },
   {
-    title: "Ready endpoint",
-    body: "The form already posts to `/api/contact`, so implementation can be filled in later.",
+    title: "For Partners & Press",
+    body: "Looking to collaborate on a world-building project or share the LemonVerse story with your audience?",
+  },
+] as const;
+
+const promiseItems = [
+  {
+    title: "A Human Touch",
+    body: "We don't believe in automated loops for our partners. Every inquiry is reviewed by a member of our team to ensure you get a thoughtful, direct response.",
+  },
+  {
+    title: "Direct Routing",
+    body: "Whether it's a question about pedagogy or engineering, your message is routed immediately to the person best equipped to answer it.",
+  },
+  {
+    title: "Rapid Response",
+    body: "We know your time is valuable. Expect to hear back from us within 24-48 hours, if not sooner.",
   },
 ] as const;
 
 const topics = [
-  "General question",
-  "Product demo",
-  "Partnership",
-  "School / classroom",
-  "Press",
+  "For Families",
+  "For Educators",
+  "For Partners & Press",
+  "School Pilot",
   "Billing / account",
 ] as const;
 
@@ -89,7 +103,7 @@ export function ContactPage() {
         kind: "success",
         message:
           payload?.message ??
-          "Message received. Delivery wiring can be added next.",
+          "Message received. A team member will follow up.",
       });
     } catch {
       setStatus({
@@ -108,16 +122,15 @@ export function ContactPage() {
           <div className="space-y-6">
             <span className="eyebrow">Contact us</span>
             <h1 className="max-w-3xl font-serif text-5xl font-bold leading-tight text-foreground sm:text-6xl">
-              Talk to LemonVerse
+              Let&apos;s write the next chapter together.
             </h1>
             <p className="max-w-xl text-lg leading-8 text-muted">
-              Use this page for demos, family questions, school pilots, press,
-              partnerships, or any launch conversation that needs a direct
-              reply.
+              Whether you&apos;re a parent with a question, an educator looking for a school pilot, or a partner ready to help us expand the universe, we&apos;d love to hear from you.
+              At LemonVerse, we value real conversation as much as we value immersion.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-3">
-              {highlights.map((item, index) => (
+              {contactTracks.map((item, index) => (
                 <article
                   key={item.title}
                   className={cn(
@@ -138,9 +151,9 @@ export function ContactPage() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/faq">Read FAQ</ButtonLink>
-              <ButtonLink href="/methodology" variant="secondary">
-                See methodology
+              <ButtonLink href="/methodology">Explore the Science</ButtonLink>
+              <ButtonLink href="/faq" variant="secondary">
+                Find Quick Answers
               </ButtonLink>
             </div>
           </div>
@@ -253,8 +266,7 @@ export function ContactPage() {
                   {isSubmitting ? "Sending..." : "Send message"}
                 </button>
                 <p className="text-sm leading-7 text-muted">
-                  The endpoint is live as a stub. Delivery wiring can be swapped
-                  in later.
+                  Every inquiry is reviewed by a human team member.
                 </p>
               </div>
 
@@ -280,34 +292,68 @@ export function ContactPage() {
         <Container className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <article className="glass-panel floating-card rounded-[2rem] p-8 surface-ring">
             <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
-              What happens next
+              Our Communication Promise
             </p>
             <h2 className="mt-4 font-serif text-3xl font-bold text-foreground">
-              A clean handoff, not a dead end.
+              A direct response path, every time.
             </h2>
-            <p className="mt-4 text-sm leading-8 text-muted">
-              The form is ready for production wiring. Once email or CRM
-              delivery is connected, this page can route inquiries into the
-              right workflow without redesigning the experience.
-            </p>
+            <div className="mt-5 grid gap-4">
+              {promiseItems.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-[1.2rem] border border-line/80 bg-black/20 p-4"
+                >
+                  <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                  <p className="mt-2 text-sm leading-7 text-muted">{item.body}</p>
+                </div>
+              ))}
+            </div>
           </article>
 
           <article className="glass-panel floating-card-slow overflow-hidden rounded-[2rem] surface-ring">
             <div className="grid gap-0 md:grid-cols-[0.85fr_1.15fr]">
               <div className="bg-gradient-to-br from-primary/14 via-background/20 to-accent/14 p-8">
                 <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
-                  Need a faster answer?
+                  While You Wait...
                 </p>
                 <h3 className="mt-4 font-serif text-3xl font-bold text-foreground">
-                  Use the FAQ for immediate clarity.
+                  Explore, learn, and connect.
                 </h3>
               </div>
               <div className="space-y-4 p-8">
-                <p className="text-sm leading-8 text-muted">
-                  Families and teams usually get the fastest answer by checking
-                  the FAQ first, then returning here when the question needs a
-                  human reply.
-                </p>
+                <a
+                  href="/methodology"
+                  className="block rounded-[1.2rem] border border-line/80 bg-black/20 p-4 text-sm leading-7 text-foreground transition hover:border-primary/40"
+                >
+                  Explore the Science: Read our Methodology to see why narrative immersion works.
+                </a>
+                <a
+                  href="/faq"
+                  className="block rounded-[1.2rem] border border-line/80 bg-black/20 p-4 text-sm leading-7 text-foreground transition hover:border-primary/40"
+                >
+                  Find Quick Answers: Check our FAQ for immediate info on pricing and bundles.
+                </a>
+                <div className="rounded-[1.2rem] border border-line/80 bg-black/20 p-4 text-sm leading-7 text-foreground">
+                  Join the Community: Follow our journey on{" "}
+                  <a
+                    href="https://www.youtube.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline decoration-primary/60 underline-offset-4 transition hover:text-primary"
+                  >
+                    YouTube
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline decoration-primary/60 underline-offset-4 transition hover:text-primary"
+                  >
+                    Instagram
+                  </a>
+                  .
+                </div>
                 <ButtonLink href="/faq" variant="secondary">
                   Open FAQ
                   <ArrowRight className="ml-2 h-4 w-4" />

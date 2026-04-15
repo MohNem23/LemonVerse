@@ -1,67 +1,69 @@
 export const homeFaqs = [
   {
-    question: "What is LemonVerse?",
+    question: "Is this a game or a course?",
     answer:
-      "LemonVerse is an AI-powered language-learning platform that teaches through story worlds, roleplay, and guided conversation instead of drill-only exercises.",
+      "It's both. LemonVerse uses the psychological hooks of gaming, story, stakes, and discovery, to deliver a professional-grade language curriculum. You won't realize you're 'studying' until you find yourself speaking.",
   },
   {
     question: "Who is LemonVerse for?",
     answer:
-      "LemonVerse is designed for children, teens, adults, and shared family plans, with the flagship worlds LemonGrove for children and LemonNoir for teens and adults.",
+      "LemonVerse is built for the entire household. We've designed two distinct experiences to meet learners where they are: LemonGrove offers magical, narrative-led discovery for children (ages 3-12), while LemonNoir provides high-stakes, cinematic immersion for teens and adults.",
   },
   {
-    question: "What does the family bundle include?",
+    question: "What is included in the Family Bundle?",
     answer:
-      "The Unified Family Bundle includes five learner profiles, access to every flagship world and library title, and performance tracking across the whole household.",
+      "One plan, zero limits. You get five individual learner profiles and total access to the entire LemonVerse ecosystem. This includes all LemonGrove adventures for the kids and every LemonNoir cinematic scenario for teens and adults.",
   },
   {
     question: "How many worlds are included?",
     answer:
-      "The current bundle includes the two flagship worlds, LemonGrove and LemonNoir, plus more than 24 guided story titles in the library across child, teen, adult, and multigenerational learning paths.",
+      "Your subscription gives you immediate, unlimited access to LemonGrove and LemonNoir. From day one, you can explore a library of over 600 battle-tested scenarios - ranging from early-childhood discovery quests to high-stakes adult negotiations.",
   },
 ];
 
 export const methodologyFaqs = [
   {
-    question: "How is LemonVerse different from flashcard apps?",
+    question: "How is LemonVerse different from Duolingo or Babbel?",
     answer:
-      "LemonVerse uses narrative context, dialogue, and emotional stakes so learners practice meaning in motion rather than isolated vocabulary lists.",
+      "We've replaced drills with missions. Instead of isolated word lists, you are practicing meaning-in-motion. You don't learn the word for 'help'; you use it to save a teammate in a story.",
   },
   {
-    question: "Does LemonVerse use comprehensible input?",
+    question: "Does this use comprehensible input?",
     answer:
-      "Yes. LemonVerse is inspired by comprehensible-input research and structures each experience around familiar context plus manageable novelty.",
+      "Yes. Our entire library is built on the Stephen Krashen model of acquisition. We structure every experience around familiar context plus manageable novelty, ensuring you are always learning up.",
   },
   {
-    question: "How do learners get feedback?",
+    question: "How do I get feedback?",
     answer:
-      "Feedback is built into the story loop through prompts, branching dialogue, reflection, and AI guidance instead of constant interruption.",
+      "Feedback is invisible and immediate. In LemonNoir, the AI scene partner reacts to your tone and choice. In LemonGrove, the narrator and the world itself guide your child. You don't get a red X; you get a new plot twist.",
   },
   {
-    question: "Is the methodology suitable for beginners?",
+    question: "Is this for beginners?",
     answer:
-      "Yes. Different worlds are paced differently, so beginners can start with child-friendly or beginner-friendly narratives and grow into more advanced scenarios.",
+      "Absolutely. LemonGrove is designed specifically for early-stage acquisition (ages 3-12), while LemonNoir beginner cases provide a safe cinematic entry point for adults who are starting from zero.",
   },
 ];
 
 export const pricingFaqs = [
   {
-    question: "How many profiles come with the family bundle?",
-    answer: "The Unified Family Bundle includes up to five learner profiles under one subscription.",
-  },
-  {
-    question: "What is the monthly price?",
-    answer: "The bundle is priced at $8.99 per month in the current marketing material.",
-  },
-  {
-    question: "Are solo plans available?",
+    question: "How many people can use the Family Bundle?",
     answer:
-      "Yes. The current comparison includes solo options for LemonNoir and LemonGrove as well as the all-access family bundle.",
+      "One subscription supports up to five unique learner profiles. Each person gets their own progress tracking and can choose between LemonGrove or LemonNoir at any time.",
   },
   {
-    question: "Can families cancel any time?",
+    question: "Is there a long-term commitment?",
     answer:
-      "Yes. The current offer is described as a cancel-any-time subscription with no hidden fees.",
+      "No. LemonVerse is a month-to-month journey. You can cancel your subscription at any time with one click. No hidden fees and no retention traps.",
+  },
+  {
+    question: "Can I switch from a Solo plan to a Bundle later?",
+    answer:
+      "Absolutely. You can upgrade your solo adventure to a family journey at any time through your account dashboard. Your progress will be saved and transferred automatically.",
+  },
+  {
+    question: "Why is it so much cheaper than other apps?",
+    answer:
+      "We don't spend millions on streak psychology or celebrity ads. We spend our time building 600+ battle-tested scenarios. We believe fluency should be accessible to every family, not a luxury.",
   },
 ];
 

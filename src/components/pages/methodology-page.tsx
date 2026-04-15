@@ -7,8 +7,7 @@ import { methodologyFaqs } from "@/content/faqs";
 import { methodologyContent } from "@/content/methodology";
 
 export function MethodologyPage() {
-  const heroQuote =
-    "Today she played with her Barbie in English. She didn't even notice. That was the moment I knew she had stopped translating and started living.";
+  const heroQuote = methodologyContent.hero.quote;
 
   return (
     <div className="pb-24">
@@ -17,8 +16,7 @@ export function MethodologyPage() {
           <article className="space-y-7">
             <span className="eyebrow">{methodologyContent.hero.eyebrow}</span>
             <h1 className="max-w-4xl font-serif text-4xl font-bold leading-tight text-foreground sm:text-6xl lg:text-7xl">
-              Language isn&apos;t{" "}
-              <span className="italic text-primary-soft">learned</span>.
+              Language isn&apos;t <span className="italic text-primary-soft">learned</span>.
               It&apos;s <span className="gradient-text">acquired.</span>
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-muted">
@@ -42,8 +40,8 @@ export function MethodologyPage() {
             </ul>
             <div className="flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/pricing">Compare Plans</ButtonLink>
-              <ButtonLink href="/faq" variant="secondary">
-                Read FAQ
+              <ButtonLink href="/worlds" variant="secondary">
+                Explore the Worlds
               </ButtonLink>
             </div>
           </article>
@@ -65,8 +63,7 @@ export function MethodologyPage() {
                   {heroQuote}
                 </p>
                 <p className="mt-6 text-xs font-semibold tracking-[0.18em] text-muted uppercase">
-                  {methodologyContent.author.name} &middot;{" "}
-                  {methodologyContent.author.role}
+                  {methodologyContent.author.name} &middot; {methodologyContent.author.role}
                 </p>
               </div>
             </div>
@@ -77,7 +74,7 @@ export function MethodologyPage() {
       <section className="screen-section py-16">
         <Container className="space-y-8">
           <div className="space-y-4">
-            <span className="eyebrow">Method overview</span>
+            <span className="eyebrow">Why traditional apps fail</span>
             <h2 className="font-serif text-4xl font-bold text-foreground sm:text-5xl">
               {methodologyContent.shift.title}
             </h2>
@@ -148,7 +145,7 @@ export function MethodologyPage() {
           <article className="glass-panel floating-card relative overflow-hidden rounded-[2.3rem] p-8 surface-ring">
             <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="space-y-5">
-                <span className="eyebrow">Neurolinguistics</span>
+                <span className="eyebrow">Narrative pedagogy</span>
                 <h2 className="font-serif text-4xl font-bold text-foreground sm:text-5xl">
                   {methodologyContent.bento.title}
                 </h2>
@@ -186,7 +183,7 @@ export function MethodologyPage() {
               />
             </div>
             <div className="space-y-4 p-7">
-              <span className="eyebrow">Flow</span>
+              <span className="eyebrow">Outcome</span>
               <h3 className="font-serif text-3xl font-bold text-foreground">
                 {methodologyContent.bento.sideCard.title}
               </h3>
@@ -201,9 +198,9 @@ export function MethodologyPage() {
       <section className="screen-section py-16">
         <Container className="space-y-8">
           <div className="space-y-4">
-            <span className="eyebrow">Method FAQ</span>
+            <span className="eyebrow">Methodology FAQ</span>
             <h2 className="font-serif text-4xl font-bold text-foreground sm:text-5xl">
-              Questions parents, learners, and search engines ask first.
+              Questions learners and families ask first.
             </h2>
           </div>
           <FaqList items={methodologyFaqs} />

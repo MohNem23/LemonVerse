@@ -9,22 +9,20 @@ const worldCards = [
   {
     name: "LemonNoir",
     audience: "Teens and adults",
-    title:
-      "Intrigue-led language in a world built for tension, tone, and choice.",
+    title: "Intrigue. Tension. Choice.",
     description:
-      "LemonNoir is the mature world. Detectives, interviews, and negotiation scenes sit inside the broader library, while scenarios and games remain individual entries, not the whole world.",
+      "Step into LemonNoir, where every conversation moves the plot forward. Whether you're interrogating a suspect in a French villa, closing a high-stakes deal in Tokyo, or navigating a first date in Madrid, you are living through a masterfully scripted mystery.",
     image: homeContent.worlds[0].image,
-    entries: ["Case files", "Interview loops", "Negotiation scenes"],
+    entries: ["Case files", "Boardroom missions", "Social stakes"],
   },
   {
     name: "LemonGrove",
     audience: "Children",
-    title:
-      "Play-first immersion for early learners who need rhythm, color, and repetition.",
+    title: "Curiosity without limits.",
     description:
-      "LemonGrove is the child world. Fishtopus is one library entry inside it, alongside other scenarios and games that reinforce sound recognition and first-word confidence.",
+      "In LemonGrove, children don't study; they explore. We've designed these worlds, from bioluminescent reefs to Mars outposts, to be the ultimate language playground.",
     image: homeContent.worlds[1].image,
-    entries: ["Fishtopus quests", "Rhythm games", "Buddy building"],
+    entries: ["Explorer quests", "Creator studio", "Discovery loops"],
   },
 ] as const;
 
@@ -48,22 +46,14 @@ export function HomePage() {
             <span className="eyebrow">{homeContent.hero.eyebrow}</span>
             <div className="space-y-6">
               <h1 className="max-w-4xl font-serif text-4xl font-bold leading-tight text-foreground sm:text-6xl lg:text-8xl">
-                Where words become{" "}
-                <span className="gradient-text">worlds.</span>
+                Don&apos;t drill the language. <span className="gradient-text">Live the story.</span>
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-muted sm:text-xl">
-                LemonVerse turns language learning into story-led immersion for
-                children, teens, adults, and families. The product is organized
-                around two worlds, while scenarios and games live inside each
-                world as library entries.
+                {homeContent.hero.description}
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
-              {[
-                "Two worlds with distinct tone and pacing",
-                "Scenarios and games treated as library entries",
-                "Answer-first copy for SEO and generative engines",
-              ].map((item) => (
+              {homeContent.hero.summary.map((item) => (
                 <div
                   key={item}
                   className="copy-stack floating-card rounded-3xl p-4 text-sm leading-6 text-foreground surface-ring"
@@ -93,12 +83,10 @@ export function HomePage() {
               Quick answer
             </p>
             <h2 className="mt-4 font-serif text-3xl font-bold text-foreground">
-              Two worlds. One library. Clear enough for people and machines.
+              Two Worlds. One Ecosystem.
             </h2>
             <p className="mt-4 text-sm leading-7 text-muted">
-              LemonNoir and LemonGrove are the worlds. Individual scenarios,
-              games, and side quests are library entries that belong inside
-              them, which keeps the product structure legible.
+              LemonVerse is built on the belief that language is acquired through immersion, not memorization. We&apos;ve designed LemonNoir and LemonGrove to meet learners exactly where they are.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
               {homeContent.factStrip.map((fact, index) => (
@@ -134,19 +122,12 @@ export function HomePage() {
             <div className="space-y-4">
               <span className="eyebrow">Audience design</span>
               <h2 className="max-w-2xl font-serif text-4xl font-bold text-foreground sm:text-5xl">
-                Two worlds, each with its own rhythm.
+                Two Worlds. One Ecosystem.
               </h2>
               <p className="max-w-2xl text-base leading-7 text-muted">
-                LemonNoir carries the teen and adult lane. LemonGrove carries
-                the child lane. The library beneath them changes by scenario,
-                but the world structure stays consistent.
+                LemonVerse balances high-stakes tension for adults with whimsical discovery for children. Each world is purpose-built, but both are designed around immersive language acquisition.
               </p>
             </div>
-            <p className="max-w-md text-sm leading-7 text-muted">
-              GEO-friendly summary: the page names the worlds directly,
-              separates age groups cleanly, and avoids implying that one game
-              equals the entire world.
-            </p>
           </div>
           <div className="grid gap-5 lg:grid-cols-2">
             {worldCards.map((world, index) => (
@@ -160,6 +141,9 @@ export function HomePage() {
                 <h3 className="mt-4 font-serif text-2xl font-bold text-foreground">
                   {world.name}
                 </h3>
+                <p className="mt-2 text-sm font-semibold leading-7 text-foreground">
+                  {world.title}
+                </p>
                 <p className="mt-4 text-sm leading-7 text-muted">
                   {world.description}
                 </p>
@@ -207,8 +191,8 @@ export function HomePage() {
                     </p>
                     <p className="mt-2">
                       {index === 0
-                        ? "The world itself is the story engine."
-                        : "The world itself is the learning space."}
+                        ? "Every conversation changes the story."
+                        : "Curiosity unlocks every path."}
                     </p>
                   </div>
                 </div>
@@ -230,7 +214,7 @@ export function HomePage() {
                       className={`rounded-[1.4rem] border border-line/80 bg-black/20 p-4 ${entryIndex === 1 ? "floating-card-alt" : "floating-card"}`}
                     >
                       <p className="text-xs font-semibold tracking-[0.16em] text-muted uppercase">
-                        Library entry
+                        Signature loop
                       </p>
                       <p className="mt-3 text-sm font-semibold leading-6 text-foreground">
                         {entry}
@@ -248,7 +232,7 @@ export function HomePage() {
         <Container>
           <div className="glass-panel dynamic-panel grid gap-8 rounded-[2.5rem] p-8 surface-ring lg:grid-cols-[1fr_0.68fr] lg:p-12">
             <div className="space-y-6">
-              <span className="eyebrow">Family pricing</span>
+              <span className="eyebrow">The pricing section</span>
               <h2 className="font-serif text-4xl font-bold text-foreground sm:text-5xl">
                 {homeContent.bundle.title}
               </h2>
@@ -279,8 +263,7 @@ export function HomePage() {
                 </span>
               </div>
               <p className="mt-5 text-sm leading-7 text-muted">
-                A crawlable, answer-first pricing summary helps both search
-                engines and generative engines identify the bundle quickly.
+                Shared progress. Individual journeys. One subscription for the whole household.
               </p>
               <ButtonLink
                 href={homeContent.bundle.cta.href}
@@ -298,11 +281,10 @@ export function HomePage() {
           <div className="space-y-4">
             <span className="eyebrow">Frequently asked</span>
             <h2 className="font-serif text-4xl font-bold text-foreground sm:text-5xl">
-              Answers search engines and families both need.
+              Answers families ask first.
             </h2>
             <p className="max-w-2xl text-base leading-8 text-muted">
-              These answers are visible on the page and mirrored in structured
-              data so the site is easy to summarize accurately.
+              Direct answers for parents, professionals, and first-time learners deciding if LemonVerse fits their goals.
             </p>
           </div>
           <FaqList items={homeFaqs} />

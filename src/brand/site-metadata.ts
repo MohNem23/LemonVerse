@@ -5,9 +5,9 @@ export const siteConfig = {
   legalName: "LemonVerse Narrative Systems",
   locale: "en_US",
   defaultTitle: "Immersive AI Language Learning for Kids, Teens, Adults, and Families",
-  tagline: "Where words become worlds.",
+  tagline: "Don't drill the language. Live the story.",
   description:
-    "LemonVerse is an AI-powered language-learning platform that teaches through story, roleplay, and guided immersion for children, teens, adults, and shared family plans.",
+    "LemonVerse unlocks fluency through high-stakes narrative immersion for children, teens, adults, and families across LemonGrove and LemonNoir.",
   keywords: [
     "AI language learning",
     "immersive language learning",
@@ -22,8 +22,8 @@ export const siteConfig = {
   familyBundlePrice: "8.99",
   currency: "USD",
   familyBundleProfiles: 5,
-  worldCount: "24+",
-  worlds: ["LemonGrove", "LemonNoir", "Narrative Hub", "Legacy Archive"],
+  worldCount: "600+",
+  worlds: ["LemonGrove", "LemonNoir"],
 } as const;
 
 export function getSiteUrl() {
